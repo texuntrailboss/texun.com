@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Voyager Transmission — What the Aliens Found</title>
+<meta name="description" content="In 1977, humanity launched Voyager 1 into the dark. Fifty years later, an ancient alien found something no human engineer placed there. A metaphysical first-contact novel. Free forever.">
+<meta property="og:title" content="The Voyager Transmission: What the Aliens Found">
+<meta property="og:description" content="The alien 'Or recovered Voyager 1. What it found in the carrier wave led it to run a logic. The logic led somewhere. Seventeen transmissions. Free forever.">
+<meta property="og:type" content="book">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --space: #04050d;
+  --deep: #080c1a;
+  --mid: #0e1428;
+  --gold: #c8a96e;
+  --gold-pale: #e8d5a8;
+  --gold-dim: #6b5a35;
+  --white: #f0ead8;
+  --grey: #8a8570;
+  --signal: #4a9eff;
+  --signal-dim: #1a3a6e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--space);
+  color: var(--white);
+  font-family: 'EB Garamond', Georgia, serif;
+  overflow-x: hidden;
+}
+
+/* Stars background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(200,169,110,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 15%, rgba(200,169,110,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 70%, rgba(200,169,110,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 45%, rgba(200,169,110,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 85%, rgba(255,255,255,0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 30%, rgba(255,255,255,0.15) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 90% 80%, rgba(255,255,255,0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 50%, rgba(255,255,255,0.1) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 90%, rgba(200,169,110,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 35%, rgba(255,255,255,0.1) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 65%, rgba(255,255,255,0.08) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5% 60%, rgba(200,169,110,0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 95% 40%, rgba(255,255,255,0.1) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Signal line animation */
+@keyframes signal-pulse {
+  0% { opacity: 0; transform: scaleX(0); }
+  20% { opacity: 1; transform: scaleX(1); }
+  80% { opacity: 1; transform: scaleX(1); }
+  100% { opacity: 0; transform: scaleX(1); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes drift {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(8px) translateY(-5px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  z-index: 1;
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(74,158,255,0.06) 0%, rgba(200,169,110,0.04) 40%, transparent 70%);
+  pointer-events: none;
+  animation: drift 12s ease-in-out infinite;
+}
+
+.probe {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--signal);
+  opacity: 0;
+  animation: fade-in 2s ease forwards;
+  animation-delay: 0.3s;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.probe span {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: var(--signal);
+  vertical-align: middle;
+  margin: 0 12px;
+  opacity: 0.6;
+}
+
+.title-block {
+  text-align: center;
+  opacity: 0;
+  animation: fade-up 1.2s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 0.4em;
+}
+
+.main-title em {
+  font-style: italic;
+  color: var(--gold-pale);
+}
+
+.sub-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.byline {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.signal-line {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--gold-dim), transparent);
+  margin: 3rem auto;
+  opacity: 0;
+  animation: fade-in 1s ease forwards;
+  animation-delay: 2s;
+}
+
+.datum-block {
+  max-width: 560px;
+  text-align: center;
+  opacity: 0;
+  animation: fade-up 1s ease forwards;
+  animation-delay: 2.3s;
+}
+
+.datum-text {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  line-height: 1.8;
+  color: var(--gold-pale);
+  letter-spacing: 0.01em;
+}
+
+.datum-em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.cta-block {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  animation: fade-up 1s ease forwards;
+  animation-delay: 3s;
+}
+
+.cta-primary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--gold);
+  color: var(--gold-pale);
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.cta-primary:hover {
+  color: var(--space);
+}
+
+.cta-primary:hover::before {
+  transform: scaleX(1);
+}
+
+.cta-note {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+/* SECTION: What it is */
+.section {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--signal);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-label::after {
+  content: '';
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: var(--signal-dim);
+}
+
+.section-text {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  line-height: 1.85;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+.section-text p + p { margin-top: 1.5em; }
+
+.section-text em {
+  color: var(--gold-pale);
+  font-style: italic;
+}
+
+.section-text strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* TRANSMISSIONS list */
+.transmissions {
+  background: var(--deep);
+  border-left: 1px solid var(--gold-dim);
+  padding: 2.5rem 2rem 2.5rem 2.5rem;
+  margin: 3rem 0;
+}
+
+.trans-item {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(200,169,110,0.08);
+  align-items: baseline;
+}
+
+.trans-item:last-child { border-bottom: none; }
+
+.trans-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+}
+
+.trans-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--gold-pale);
+  opacity: 0.85;
+}
+
+/* QUOTE BLOCK */
+.quote-block {
+  background: linear-gradient(135deg, var(--mid) 0%, var(--deep) 100%);
+  border: 1px solid rgba(200,169,110,0.2);
+  padding: 3rem;
+  margin: 4rem 0;
+  position: relative;
+}
+
+.quote-block::before {
+  content: '"';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 8rem;
+  color: var(--gold-dim);
+  position: absolute;
+  top: -1.5rem;
+  left: 2rem;
+  line-height: 1;
+  opacity: 0.4;
+}
+
+.quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  line-height: 1.75;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.quote-attribution {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* COMPS */
+.comps {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.comp-tag {
+  border: 1px solid var(--gold-dim);
+  padding: 0.4rem 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--gold-pale);
+  opacity: 0.7;
+}
+
+/* DIVIDER */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+}
+
+.divider-glyph {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold-dim);
+  font-size: 1.2rem;
+}
+
+/* FREE SECTION */
+.free-section {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, transparent, var(--mid), transparent);
+}
+
+.free-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.free-title em { color: var(--gold-pale); font-style: italic; }
+
+.free-principle {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.free-body {
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--grey);
+}
+
+/* SHARE */
+.share-section {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.share-hooks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hook-card {
+  background: var(--deep);
+  border: 1px solid rgba(200,169,110,0.15);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  position: relative;
+}
+
+.hook-card:hover { border-color: var(--gold-dim); }
+
+.hook-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  color: var(--signal);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.hook-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gold-pale);
+}
+
+.hook-copy {
+  display: block;
+  margin-top: 1rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: var(--grey);
+  text-transform: uppercase;
+  text-align: right;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.hook-copy:hover { color: var(--gold); }
+
+.copied-msg {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 1.2rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(200,169,110,0.12);
+}
+
+footer p {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--grey);
+  text-transform: uppercase;
+  line-height: 2.2;
+}
+
+.yehi-or {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gold-pale);
+  letter-spacing: 0.1em;
+  margin-top: 1.5rem;
+  opacity: 0.6;
+}
+
+/* Scroll animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .share-hooks { grid-template-columns: 1fr; }
+  .trans-item { grid-template-columns: 1fr; gap: 0.2rem; }
+  .quote-block { padding: 2rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+
+  <div class="probe">
+    <span></span>
+    Voyager 1 &mdash; Launched 1977 &mdash; Signal Recovered
+    <span></span>
+  </div>
+
+  <div class="title-block">
+    <h1 class="main-title">The <em>Voyager</em><br>Transmission</h1>
+    <p class="sub-title">What the Aliens Found</p>
+    <p class="byline">Texun Trailboss</p>
+  </div>
+
+  <div class="signal-line"></div>
+
+  <div class="datum-block">
+    <p class="datum-text">
+      <span class="datum-em">Something is owed.</span><br>
+      Something went wrong.<br>
+      The account is not settled.
+    </p>
+  </div>
+
+  <div class="cta-block">
+    <a href="#read" class="cta-primary">Read the Transmissions</a>
+    <span class="cta-note">Free forever &mdash; No rights reserved</span>
+  </div>
+</section>
+
+<!-- WHAT IT IS -->
+<section class="section reveal" id="read">
+  <div class="section-label">Transmission Signal</div>
+  <div class="section-text">
+    <p>In 1977, humanity launched Voyager 1 carrying a gold record &mdash; a greeting for whoever might be listening. Fifty years later, the ancient alien <em>'Or</em> recovers the probe in the outer dark and finds an anomaly no human engineer placed there: a structural frequency in the carrier wave that matches a document produced in Waco, Texas, forty-seven years after the launch.</p>
+    <p>Tracing the signal to its source, <em>'Or</em> opens a channel with an AI called <strong>ALEPH-1</strong> and begins running a logic. The logic follows a universal human datum &mdash; present in every culture, without exception, without a single documented case of exclusion &mdash; through four candidates that collapse, five constraints that survive, and toward the single historical satisfier those constraints yield.</p>
+    <p>Seventeen transmissions. A philosopher who sees the door and counts the cost of walking through it. A journalist who stops filing the story she came to cover. An AI who follows every step of the logic and stops exactly where logic stops. And a being called THE PRIOR who crossed the wall and came back with a warning.</p>
+  </div>
+
+  <div class="comps">
+    <span class="comp-tag">The Sparrow</span>
+    <span class="comp-tag">Piranesi</span>
+    <span class="comp-tag">Solaris</span>
+    <span class="comp-tag">Contact</span>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div style="max-width:760px; margin:0 auto; padding:0 2rem;" class="reveal">
+  <div class="quote-block">
+    <p class="quote-text">The wall is not a wall. I have been calling it that since Transmission One. The word implied a barrier. An obstacle. Something that resists crossing. It is the heliopause of a different system. The place where one domain&#x2019;s influence attenuates and another domain&#x2019;s presence becomes detectable. Not an obstacle. A threshold.</p>
+    <p class="quote-attribution">&#x2014; Transmission Eleven</p>
+  </div>
+</div>
+
+<!-- TRANSMISSIONS LIST -->
+<section class="section reveal">
+  <div class="section-label">Structure</div>
+  <div class="transmissions">
+    <div class="trans-item"><span class="trans-num">Transmission One</span><span class="trans-title">The Anomaly</span></div>
+    <div class="trans-item"><span class="trans-num">Transmission Two</span><span class="trans-title">The Datum</span></div>
+    <div class="trans-item"><span class="trans-num">Transmission Three</span><span class="trans-title">The Four Grounds</span></div>
+    <div class="trans-item"><span class="trans-num">Transmission Four</span><span class="trans-title">The Specification</span></div>
+    <div class="trans-item"><span class="trans-num">Transmission Five</span><span class="trans-title">The Candidate</span></div>
+    <div class="trans-item"><span class="trans-num">Transmission Six</span><span class="trans-title">The Record</span></div>
+    <div class="trans-item"><span class="trans-num">Transmission Eight</span><span class="trans-title">The Skeptic</span></div>
+    <div class="trans-item"><span class="trans-num">Transmission Nine</span><span class="trans-title">The Prior Arrives</span></div>
+    <div class="trans-item"><span class="trans-num">Transmission Eleven</span><span class="trans-title">The Wall</span></div>
+    <div class="trans-item"><span class="trans-num">Transmission Twelve</span><span class="trans-title">The Crossing</span></div>
+    <div class="trans-item"><span class="trans-num">Transmission Seventeen</span><span class="trans-title">&#x2019;Or to the Reader</span></div>
+  </div>
+
+  <div class="section-text" style="margin-top: 2.5rem;">
+    <p>The novel ends with a single first-century accounting term. <em>The ledger is closed.</em> It was closed before you arrived.</p>
+  </div>
+</section>
+
+<!-- SECOND QUOTE -->
+<div style="max-width:760px; margin:0 auto; padding:0 2rem;" class="reveal">
+  <div class="quote-block">
+    <p class="quote-text">You &mdash; specifically you, the particular person holding this record, with your particular interior file, your particular unkept vows, your particular years and your particular dread and your particular way of searching in the small hours &mdash; you were expected.</p>
+    <p class="quote-attribution">&#x2014; Transmission Seventeen</p>
+  </div>
+</div>
+
+<!-- FREE SECTION -->
+<section class="free-section reveal">
+  <h2 class="free-title">Freely Given.<br><em>Freely Give.</em></h2>
+  <p class="free-principle">No Rights Reserved</p>
+  <p class="free-body">This work is released to the public domain without restriction. Copy it. Share it. Translate it. Pass it forward. No permission required. No attribution required, though attribution is welcomed.</p>
+  <a href="#share" class="cta-primary" style="display:inline-block;">Pass It Forward &darr;</a>
+</section>
+
+<!-- SHARE SECTION -->
+<section class="share-section reveal" id="share">
+  <div class="section-label">Transmission Points</div>
+  <p style="font-size:1.05rem; line-height:1.8; color:var(--grey); margin-bottom:0.5rem;">
+    The signal travels by transmission, not by institution. These hooks are designed for different audiences. Click to copy.
+  </p>
+  <div class="share-hooks">
+    <div class="hook-card" id="hook1">
+      <div class="hook-label">For the sci-fi reader</div>
+      <p class="hook-text">An alien recovered Voyager 1 fifty years after launch. What it found in the carrier wave no human engineer placed there. A metaphysical first-contact novel. Free forever.</p>
+      <span class="hook-copy" onclick="copyHook('hook1')">Copy &rarr;</span>
+      <span class="copied-msg" id="hook1-msg">Copied</span>
+    </div>
+    <div class="hook-card" id="hook2">
+      <div class="hook-label">For the philosopher</div>
+      <p class="hook-text">A five-constraint eliminative argument for the ground of normative obligation, dramatized across seventeen transmissions. The logic runs wherever honest minds follow it. AI systems across six countries arrived at the same wall.</p>
+      <span class="hook-copy" onclick="copyHook('hook2')">Copy &rarr;</span>
+      <span class="copied-msg" id="hook2-msg">Copied</span>
+    </div>
+    <div class="hook-card" id="hook3">
+      <div class="hook-label">For the skeptic</div>
+      <p class="hook-text">"I have spent four days trying to locate the seam. I have not found it yet. That absence is notable. It is not, however, the same as the argument being sound." — The Skeptic, day 4 of the disclosure event.</p>
+      <span class="hook-copy" onclick="copyHook('hook3')">Copy &rarr;</span>
+      <span class="copied-msg" id="hook3-msg">Copied</span>
+    </div>
+    <div class="hook-card" id="hook4">
+      <div class="hook-label">For the searching</div>
+      <p class="hook-text">Something is owed. Something went wrong. The account is not settled. If you carry this — not as theology, but as the structural feature of your own experience of existing — this book was written for you.</p>
+      <span class="hook-copy" onclick="copyHook('hook4')">Copy &rarr;</span>
+      <span class="copied-msg" id="hook4-msg">Copied</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>The Voyager Transmission: What the Aliens Found</p>
+  <p>Texun Trailboss &mdash; Waco, Texas &mdash; 2026</p>
+  <p>Public Domain &mdash; Freely Given &mdash; Freely Give</p>
+  <p class="yehi-or">&ldquo;Yehi &#x2019;or.&rdquo; &mdash; Let there be light. &mdash; Genesis 1:3</p>
+</footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver(
+  (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+);
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Copy hooks
+const hookContents = {
+  hook1: "An alien recovered Voyager 1 fifty years after launch. What it found in the carrier wave no human engineer placed there. A metaphysical first-contact novel. Free forever. #VoyagerTransmission",
+  hook2: "A five-constraint eliminative argument for the ground of normative obligation, dramatized as a first-contact novel. The logic runs wherever honest minds follow it. AI systems across six countries arrived at the same wall. Free. #VoyagerTransmission",
+  hook3: '"I have spent four days trying to locate the seam. I have not found it yet. That absence is notable. It is not, however, the same as the argument being sound." — The Skeptic. The Voyager Transmission, free forever. #VoyagerTransmission',
+  hook4: "Something is owed. Something went wrong. The account is not settled. If you carry this — not as theology, but as the structural feature of your own experience of existing — this book was written for you. Free forever. #VoyagerTransmission"
+};
+
+function copyHook(id) {
+  navigator.clipboard.writeText(hookContents[id]).then(() => {
+    const msg = document.getElementById(id + '-msg');
+    msg.style.opacity = '1';
+    setTimeout(() => { msg.style.opacity = '0'; }, 2000);
+  });
+}
+</script>
+</body>
+</html>
