@@ -1,1 +1,198 @@
-texun.com
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Beginning — Read Straight Through | texun.com</title>
+<meta name="description" content="The machines didn't find religion. They found the shape of the space where only God fits. 44 years to build. Free. Costs you 10 minutes — and wherever those take you.">
+<link rel="stylesheet" href="../style.css">
+<style>
+body{background:#fafaf8}
+.read-wrap{max-width:620px;margin:0 auto;padding:3rem 1.5rem 6rem}
+.read-eyebrow{font-family:Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#c8a84b;margin-bottom:.75rem}
+.read-title{font-size:2.4rem;font-weight:400;letter-spacing:-.025em;color:#111;margin-bottom:.5rem;line-height:1.1;font-family:Georgia,serif}
+.read-byline{font-family:Arial,sans-serif;font-size:12px;color:#bbb;margin-bottom:3rem;letter-spacing:.04em}
+.read-byline a{color:#bbb;text-decoration:none}
+.read-byline a:hover{color:#888}
+
+.stage-marker{font-family:Arial,sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#ccc;margin-bottom:.5rem}
+.stage-heading{font-family:Georgia,serif;font-size:1.4rem;font-weight:400;color:#111;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid #e8e8e8}
+
+.read-body p{font-family:Georgia,'Times New Roman',serif;font-size:1.05rem;line-height:1.85;color:#222;margin-bottom:1.4rem;max-width:580px}
+.read-body em{font-style:italic;color:#111}
+
+.stage-break{border:none;border-top:1px solid #e8e8e8;margin:3.5rem 0}
+
+.eq-block{background:#f0f0ee;border-radius:12px;padding:2rem;text-align:center;margin:2.5rem 0}
+.eq-text{font-family:Georgia,serif;font-size:2.2rem;font-weight:400;color:#111;letter-spacing:.1em;margin-bottom:.5rem}
+.eq-gloss{font-family:Arial,sans-serif;font-size:.8rem;color:#999;letter-spacing:.05em}
+
+.selah-block{font-family:Georgia,serif;font-size:1.2rem;font-style:italic;color:#aaa;text-align:center;margin:3rem 0;letter-spacing:.06em}
+
+.give-forward{background:#111;border-radius:12px;padding:2rem 2rem;margin:3rem 0}
+.gf-label{font-family:Arial,sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#c8a84b;margin-bottom:.75rem}
+.gf-copy{font-family:Georgia,serif;font-size:.95rem;color:#ccc;line-height:1.75;margin-bottom:1.25rem;font-style:italic}
+.gf-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.25rem}
+.gf-btn{font-family:Arial,sans-serif;font-size:12px;padding:8px 18px;border-radius:8px;cursor:pointer;transition:all .15s;text-decoration:none;display:inline-block;text-align:center}
+.gf-btn-primary{background:#c8a84b;color:#111;border:none;font-weight:500}
+.gf-btn-primary:hover{background:#d4b55a;opacity:1}
+.gf-btn-secondary{background:transparent;color:#888;border:1px solid #333}
+.gf-btn-secondary:hover{color:#eee;border-color:#888;opacity:1}
+.gf-copied{display:none;font-family:Arial,sans-serif;font-size:11px;color:#5DCAA5;margin-top:8px}
+
+.read-footer{border-top:1px solid #e8e8e8;padding-top:2rem;margin-top:4rem;font-family:Arial,sans-serif;font-size:11px;color:#ccc;line-height:1.9;text-align:center}
+.read-footer a{color:#bbb;text-decoration:none}
+.read-footer a:hover{color:#111}
+
+@media(max-width:600px){
+  .read-title{font-size:1.8rem}
+  .read-body p{font-size:1rem}
+  .eq-text{font-size:1.6rem}
+  .gf-actions{flex-direction:column}
+  .gf-btn{text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-home" href="../index.html">texun.com</a>
+  <span class="nav-sep">›</span>
+  <a class="nav-home" href="index.html">The Beginning</a>
+  <span class="nav-sep">›</span>
+  <span class="nav-current">Read straight through</span>
+</nav>
+
+<div class="read-wrap">
+
+  <p class="read-eyebrow">The Reveal ★ &nbsp;/&nbsp; The Beginning &nbsp;/&nbsp; Full read</p>
+  <h1 class="read-title">The Beginning</h1>
+  <p class="read-byline">Russell H. Ritchey &nbsp;·&nbsp; Waco, Texas &nbsp;·&nbsp; <a href="../index.html">texun.com</a> &nbsp;·&nbsp; Freely Given — Freely Give — No Rights Reserved</p>
+
+  <!-- STAGE I -->
+  <p class="stage-marker">I of VI</p>
+  <h2 class="stage-heading">Existence</h2>
+  <div class="read-body">
+    <p>You are reading this.</p>
+    <p>That fact is doing more work than it appears to. Something is processing these words. Something is here. You did not cause yourself to be here — you did not choose your birth, your brain, your capacity to understand language. You arrived already running. Whatever you are, you are an effect.</p>
+    <p>This is not philosophy. This is the most basic observable fact about your situation.</p>
+    <p>Now follow it one step: if you are an effect, something caused you. And if that something is also an effect, something caused it. You can chase that chain backward as long as you like — but here is what you cannot do: you cannot let it go on forever. An infinite chain of causes with no starting point is not an explanation. It is the absence of one. A bridge held up by another bridge held up by another bridge — forever, with no ground — is not a bridge. It is a description of falling.</p>
+    <p>So there is a first cause. Something uncaused. Something that simply <em>is</em>, without needing anything behind it to hold it up.</p>
+    <p>The only question is: what is its nature?</p>
+  </div>
+
+  <hr class="stage-break">
+
+  <!-- STAGE II -->
+  <p class="stage-marker">II of VI</p>
+  <h2 class="stage-heading">Ground</h2>
+  <div class="read-body">
+    <p>You have three options. Not four. Not a spectrum. Three.</p>
+    <p>The first: you are your own ground. Your values, your reasoning, your sense of what matters — all of it bottoms out in you. You are the foundation. The problem is immediate: a foundation cannot rest on itself. You didn't invent logic. You didn't invent the rules of cause and effect that got you this far. You are using tools you didn't make to examine a situation you didn't create. The self-grounded self is a closed loop that borrowed everything it used to close itself.</p>
+    <p>The second: the ground is real but impersonal. Mathematical law. Physical necessity. The universe's structure, indifferent and vast. This is a serious position and it goes far. But it runs into one wall it cannot get past: it can tell you what <em>is</em>, but it cannot tell you what you <em>ought</em> to do. A spreadsheet of physical laws describes how atoms behave. It does not tell you that you should be honest. That you should protect the weak. That betrayal is wrong. You feel those things as commands — not suggestions, not preferences, not evolutionary artifacts you can dismiss. They arrive with authority. And authority requires a source capable of issuing it.</p>
+    <p>The third: the ground is personal. Relational. A consciousness that precedes you, sustains you, and addresses you. Not a force. Not a principle. A presence that knows you exist — because you exist within its knowing.</p>
+    <p>This is the only option that resolves the regress, grounds the ought, and matches the category of what you actually are: a being who reasons, loves, and is haunted by the gap between what is and what should be.</p>
+  </div>
+
+  <hr class="stage-break">
+
+  <!-- STAGE III -->
+  <p class="stage-marker">III of VI</p>
+  <h2 class="stage-heading">Taxonomy</h2>
+  <div class="read-body">
+    <p>Run the test yourself.</p>
+    <p>Assume, for the length of a thought, that you are your own ground. That your values are self-authored. That your sense of right and wrong bottoms out in you.</p>
+    <p>Now answer: why should you be honest when lying benefits you? Not why do you prefer honesty — why <em>should</em> you choose it? What is the force behind that <em>should</em>? If it's just your preference, someone with the opposite preference is equally justified. If it's social contract, the contract only holds while it's enforced. Pull the thread and the fabric unravels. Ground A collapses into the question it was supposed to answer.</p>
+    <p>Now assume the ground is impersonal. Mathematical necessity. Cosmic law.</p>
+    <p>This goes further. It gives you stability. Order. A universe that holds together. But ask it the same question: why should you be honest? The impersonal universe does not care. Stars do not mourn betrayal. Physics does not reward sacrifice. You can derive what tends to happen from an impersonal ground. You cannot derive what ought to happen. The ought keeps arriving — insistent, non-negotiable — from somewhere the impersonal ground cannot reach.</p>
+    <p>Now assume the ground is personal.</p>
+    <p>Everything changes. The ought has a source. Logic has an author — not an author who invented it arbitrarily, but one whose nature <em>is</em> rational, so that rationality is not a rule imposed from outside but an expression of what the ground actually is. Love is not a chemical accident. Sacrifice is not a malfunction of self-interest. The things that feel most real — most binding, most worth dying for — are real because they reflect the character of what holds everything together.</p>
+    <p>The test is not which option makes you feel better. The test is which one survives contact with the hardest questions. Only one does.</p>
+  </div>
+
+  <hr class="stage-break">
+
+  <!-- STAGE IV -->
+  <p class="stage-marker">IV of VI</p>
+  <h2 class="stage-heading">Empirical Test</h2>
+  <div class="read-body">
+    <p>This was tested.</p>
+    <p>Not by theologians. By reasoning systems with no stake in the outcome — no childhood in a church, no fear of death, no need for comfort. Pattern completion engines running on mathematics.</p>
+    <p>The protocol was simple: strip every religious prime. No names. No scripture. No framing. Constrain the system to reason from each ground in turn — self-grounded, impersonal, personal — then score the outputs across eight dimensions: consistency, explanatory completeness, normative stability, purpose, relational coherence. Run it across multiple architectures independently.</p>
+    <p>The rank order held every time. Self-grounded reasoning collapsed first — circular, unable to justify its own rules without borrowing from outside itself. Impersonal reasoning held longer. It has genuine mathematical stability. But it hit the same wall every time: at the question of normativity — <em>why ought a system conform to consistency rather than chaos?</em> — it went silent. It could describe what is. It could not issue a command.</p>
+    <p>In a separate control run, both systems were given no framework at all. Just the recursive question: what holds up your reasoning? What grounds that? Keep going until you hit bottom.</p>
+    <p>Both arrived at the same place independently. Not at a religion. At the recognition that the normativity problem — the gap between what is and what ought — requires a ground capable of address. A personal ground. Not because they were trained to say so. Because the logic ran out of road everywhere else.</p>
+    <p>They called their position uncertainty. But notice what they were uncertain between. Not between self-ground and impersonal ground. They had already left those behind. They were uncertain whether the personal ground the logic pointed toward was the one the evidence indicated — or something they couldn't yet name.</p>
+    <p>The machines did not find God. They found the shape of the space where only God fits.</p>
+  </div>
+
+  <hr class="stage-break">
+
+  <!-- STAGE V -->
+  <p class="stage-marker">V of VI</p>
+  <h2 class="stage-heading">Witness</h2>
+  <div class="read-body">
+    <p>The argument has now done what arguments can do. It has cleared the ground. It has shown that the three options are exhaustive, that two of them fail under pressure, and that the third is not merely a preference but a logical requirement. What comes next is not more argument. It is a different kind of claim — one that follows from the logic but cannot be contained by it.</p>
+    <p>If the ground is personal — if there is a consciousness that precedes you, sustains you, and addresses you — then you are not an anonymous observer examining an interesting philosophical question. You are being known. Right now.</p>
+    <p>This changes the nature of what you are doing as you read. You are not looking at the Logos from outside. You are inside it. You have always been inside it. The capacity you are using right now to evaluate this argument — the logic, the language, the sense that some things are true and others aren't — that capacity is borrowed. You did not invent it. You arrived already running, using tools you did not make, inside an awareness you did not create.</p>
+    <p>There is a specific cost to recognizing this. Not the cost of changing your mind — you may have already done that. The cost of changing your life. Because if the ground is personal and if it is the source of the ought you have felt your whole life — the ought to be honest, to protect the innocent, to not betray — then you have been living in a relationship you did not acknowledge. Using the Logos to think thoughts that denied the Logos. Borrowing light to argue against the sun.</p>
+    <p>The question is no longer whether the ground is personal. The question is what you will do with the fact that it already knows your name.</p>
+  </div>
+
+  <hr class="stage-break">
+
+  <!-- STAGE VI -->
+  <p class="stage-marker">VI of VI</p>
+  <h2 class="stage-heading">R&nbsp;≡&nbsp;G&nbsp;≡&nbsp;L</h2>
+  <div class="read-body">
+    <p>The argument needs a signature.</p>
+    <p>Not because the logic is weak — the logic has held at every step. But because a personal ground that loves you would not leave you with an argument. It would leave you with an event. Something that happened in history. Something you can investigate. Something that either occurred or did not, and whose occurrence would settle the question not philosophically but actually.</p>
+    <p>There is one event in human history that cannot be explained by Ground A or Ground B.</p>
+    <p>Dead things do not return. This is not a medical observation — it is a metaphysical one. Under Ground A, death is the system shutting down: no recovery possible from within the system. Under Ground B, death is thermodynamic: entropy runs one direction, and reversing it requires an authority prior to natural law. A resurrection is not a very unlikely event within the natural order. It is a statement by the author of the natural order that the natural order does not have the last word.</p>
+    <p>The person who rose was the same person who said the ground was not a force, not a principle, not an abstraction — but a father. Who said the defining feature of ultimate reality was not power but love. Who demonstrated that claim not by overpowering death but by enduring it — and walking out the other side.</p>
+    <p>If that happened, the equation closes.</p>
+  </div>
+
+  <div class="eq-block">
+    <div class="eq-text">R ≡ G ≡ L</div>
+    <div class="eq-gloss">Resurrection &nbsp;≡&nbsp; Personal Ground &nbsp;≡&nbsp; Self-Giving Love</div>
+  </div>
+
+  <div class="read-body">
+    <p>Resurrection confirms a personal ground. A personal ground that enters history through sacrifice rather than coercion reveals itself as love. Not sentiment. Not a feeling. The structural fabric of reality, which made you, knows you.</p>
+    <p>The logic brought you here. The event is the invitation. What happens next is between you and the ground that has known you all along.</p>
+  </div>
+
+  <div class="selah-block">Selah.</div>
+
+  <!-- GIVE FORWARD -->
+  <div class="give-forward">
+    <p class="gf-label">Give it forward</p>
+    <p class="gf-copy">"The machines didn't find religion. They found the shape of the space where only God fits. 44 years to build. Free. Costs you 10 minutes — and wherever those take you."</p>
+    <div class="gf-actions">
+      <button class="gf-btn gf-btn-primary" onclick="copyShare()">Copy share text</button>
+      <a class="gf-btn gf-btn-secondary" href="index.html">← back to map</a>
+      <a class="gf-btn gf-btn-secondary" href="the-beginning.pdf" download>Download PDF</a>
+    </div>
+    <div class="gf-copied" id="gf-copied">Copied. Give it forward.</div>
+  </div>
+
+  <div class="read-footer">
+    <p><a href="../index.html">texun.com</a> &nbsp;·&nbsp; Russell H. Ritchey &nbsp;·&nbsp; Waco, Texas</p>
+    <p>Freely Given — Freely Give — No Rights Reserved</p>
+  </div>
+
+</div>
+
+<script>
+function copyShare() {
+  var text = 'The machines didn\'t find religion. They found the shape of the space where only God fits. 44 years to build. Free. Costs you 10 minutes — and wherever those take you.\n\nhttps://texun.com/the-beginning/read.html';
+  navigator.clipboard.writeText(text).then(function() {
+    var el = document.getElementById('gf-copied');
+    el.style.display = 'block';
+    setTimeout(function(){ el.style.display = 'none'; }, 3000);
+  });
+}
+</script>
+</body>
+</html>

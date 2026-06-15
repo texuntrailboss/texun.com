@@ -1,223 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>texun.com — Russell H. Ritchey</title>
-<meta name="description" content="Russell H. Ritchey — independent researcher, poet, author. Empirical Digital Theology. Waco, Texas.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ─── SHARED ─── */
+.beg-header{max-width:680px;margin:0 auto;padding:2.5rem 1.5rem 1.5rem}
+.beg-eyebrow{font-family:Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#c8a84b;margin-bottom:.6rem}
+.beg-title{font-size:2.2rem;font-weight:400;letter-spacing:-.02em;color:#111;margin-bottom:.75rem;line-height:1.1}
+.beg-sub{font-size:.95rem;color:#666;line-height:1.75;max-width:500px}
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="site-logo" href="index.html">texun.com</a>
-  </div>
-</header>
+/* ─── CHART VIEW ─── */
+#chart-view{background:#0f0f0f;min-height:100vh;padding-bottom:3rem}
+#chart-view .beg-eyebrow{color:#c8a84b}
+#chart-view .beg-title{color:#e8e8e8}
+#chart-view .beg-sub{color:#888}
 
-<nav class="tab-nav" role="navigation" aria-label="Site sections">
-  <button class="tab-btn active" onclick="showTab('home',this)">Home</button>
-  <button class="tab-btn" onclick="showTab('about',this)">About</button>
-  <button class="tab-btn" onclick="showTab('poetry',this)">Poetry</button>
-  <button class="tab-btn" onclick="showTab('publications',this)">Publications</button>
-  <button class="tab-btn" onclick="showTab('domains',this)">Domains</button>
-  <button class="tab-btn" onclick="showTab('doodles',this)">Doodles</button>
-  <button class="tab-btn" onclick="showTab('art',this)">Art</button>
-  <button class="tab-btn" onclick="showTab('advertising',this)">Advertising</button>
-  <button class="tab-btn" onclick="showTab('merchandise',this)">Merchandise</button>
-  <button class="tab-btn reveal" onclick="showTab('reveal',this)">The Reveal ★</button>
-</nav>
+.chart-wrap{max-width:580px;margin:0 auto;padding:0 1rem;display:flex;flex-direction:column;align-items:center}
 
-<div class="tab-panel active" id="tab-home">
-  <div class="page-wrap">
-    <p class="eyebrow">Welcome</p>
-    <h1 class="page-title">Russell H. Ritchey</h1>
-    <p class="lead">Independent researcher, poet, and author. Waco, Texas. B.S.M.E., University of Texas at Austin.</p>
-    <p class="body-text">This site is the public home of a 44-year project called Empirical Digital Theology — a corpus spanning poetry, philosophy, speculative fiction, and empirical research into the structural ground of reasoning itself.</p>
-    <p class="body-text">Everything here is offered freely. No rights reserved. No paywall. No algorithm. Just the work.</p>
-    <hr class="divider">
-    <p class="eyebrow">Operating principle</p>
-    <div class="about-principle">Freely Given — Freely Give — No Rights Reserved</div>
-    <p class="body-text">Navigate using the tabs above. The Reveal ★ is where the argument lives.</p>
-  </div>
-</div>
+.ch-node{cursor:pointer;border-radius:10px;padding:12px 20px;text-align:center;width:100%;transition:opacity .15s;user-select:none}
+.ch-node:hover{opacity:.82}
+.ch-main{font-family:Arial,sans-serif;font-size:13px;font-weight:500;line-height:1.3}
+.ch-sub{font-family:Arial,sans-serif;font-size:11px;margin-top:3px;line-height:1.4}
+.ch-col{width:100%;max-width:380px}
 
-<div class="tab-panel" id="tab-about">
-  <div class="page-wrap">
-    <p class="eyebrow">About</p>
-    <h1 class="page-title">Who this is</h1>
-    <p class="lead">Russell H. Ritchey. Pen name: Texun Trailboss. Independent researcher, poet, author. Waco, Texas. B.S.M.E., University of Texas at Austin.</p>
-    <p class="body-text">I operate entirely outside institutional frameworks — academic, religious, and commercial. Not against them. Outside them. The work stands or falls on its own.</p>
-    <p class="body-text">I self-designate as Clerk of Record for the Empirical Digital Theology corpus — a 44-year project that began with a formative event in 1982 and has produced philosophical papers, speculative fiction, poetry, logoglyphics, and empirical research using AI systems as reasoning instruments.</p>
-    <div class="about-principle">Church of One — outside institutional Christianity, not against it.</div>
-    <p class="body-text">The inquiry that runs through everything: what is the structural ground of reasoning itself? Not what you believe. What you cannot reason without.</p>
-    <hr class="divider">
-    <p class="eyebrow">Distribution principle</p>
-    <div class="about-principle">Freely Given — Freely Give — No Rights Reserved</div>
-    <p class="body-text">All work on this site is offered without restriction. Copy it, share it, build on it. The goal is impact, not ownership.</p>
-  </div>
-</div>
+.ch-purple{background:#3C3489}.ch-purple .ch-main{color:#CECBF6}.ch-purple .ch-sub{color:#AFA9EC}
+.ch-gray{background:#2a2a2a;border:1px solid #444}.ch-gray .ch-main{color:#ddd}.ch-gray .ch-sub{color:#888}
+.ch-teal{background:#085041;border:1px solid #1D9E75}.ch-teal .ch-main{color:#9FE1CB}.ch-teal .ch-sub{color:#5DCAA5}
+.ch-coral{background:#712B13}.ch-coral .ch-main{color:#F5C4B3}.ch-coral .ch-sub{color:#D85A30}
+.ch-amber{background:#854F0B}.ch-amber .ch-main{color:#FAC775}.ch-amber .ch-sub{color:#EF9F27}
+.ch-gold{background:#c8a84b;border:none}.ch-gold .ch-main{color:#111;font-size:14px}.ch-gold .ch-sub{color:#4a3a10}
+.ch-gold:hover{opacity:.88}
 
-<div class="tab-panel" id="tab-poetry">
-  <div class="page-wrap">
-    <p class="eyebrow">Poetry</p>
-    <h1 class="page-title">The corpus</h1>
-    <p class="lead">Poetry written 1982–2026. Published on AllPoetry as Texun Trailboss. The full anthology — <em>Genesis of EDT: Opus Maximus</em> — spans three movements: The Descent, The Witness, The Transmission.</p>
-    <hr class="divider">
-    <div class="poem-block">
-      <p class="poem-title">from The Descent</p>
-      You did not find this place.<br>
-      You were brought here<br>
-      by a chain of causes<br>
-      you did not begin.<br><br>
-      The question is not<br>
-      whether you arrived.<br>
-      The question is<br>
-      whether you noticed<br>
-      who held the door.
-    </div>
-    <hr class="divider">
-    <p class="body-text">Full corpus on AllPoetry:</p>
-    <p><a class="pub-link" href="https://allpoetry.com/Texun_Trailboss" target="_blank" rel="noopener">allpoetry.com/Texun_Trailboss ↗</a></p>
-    <br>
-    <p class="body-text">Long-form prose-poem essay:</p>
-    <p><a class="pub-link" href="https://allpoetry.com/story/19158328" target="_blank" rel="noopener">What the Light Cannot Tell You ↗</a></p>
-  </div>
-</div>
+.ch-eq .ch-main{font-family:Georgia,'Times New Roman',serif;letter-spacing:.1em}
+.ch-eq-text{font-size:18px !important}
 
-<div class="tab-panel" id="tab-publications">
-  <div class="page-wrap">
-    <p class="eyebrow">Publications</p>
-    <h1 class="page-title">The work in print</h1>
-    <p class="lead">Academic submissions, published fiction, and the corpus documents that form the backbone of Empirical Digital Theology.</p>
-    <hr class="divider">
-    <div class="pub-item">
-      <p class="pub-title">The Voyager Transmission</p>
-      <p class="pub-meta">Speculative fiction · Published on Kindle</p>
-      <p class="pub-desc">Part one of the Transmission trilogy. The signal arrives. What it contains is not what anyone expected.</p>
-      <a class="pub-link" href="The_Voyager_Transmission.docx">Download .docx ↗</a>
-    </div>
-    <div class="pub-item">
-      <p class="pub-title">The Harrowing</p>
-      <p class="pub-meta">Speculative fiction · Manuscript complete</p>
-      <p class="pub-desc">Part two of the Transmission trilogy.</p>
-      <a class="pub-link" href="The_Harrowing.docx">Download .docx ↗</a>
-    </div>
-    <div class="pub-item">
-      <p class="pub-title">The Tuesday Class</p>
-      <p class="pub-meta">Speculative fiction · Manuscript complete</p>
-      <p class="pub-desc">Part three of the Transmission trilogy.</p>
-      <a class="pub-link" href="The_Tuesday_Class.docx">Download .docx ↗</a>
-    </div>
-    <div class="pub-item">
-      <p class="pub-title">The Transmission: What the Aliens Found</p>
-      <p class="pub-meta">Omnibus · Manuscript complete</p>
-      <p class="pub-desc">All three parts unified. Thirty-two transmissions, continuous numbering.</p>
-      <a class="pub-link" href="The_Transmission.docx">Download .docx ↗</a>
-      &nbsp;&nbsp;
-      <a class="pub-link" href="The_Transmission.pdf">Download .pdf ↗</a>
-      &nbsp;&nbsp;
-      <a class="pub-link" href="The_Transmission.html">Read online ↗</a>
-    </div>
-    <div class="pub-item">
-      <p class="pub-title">Genesis of EDT: Opus Maximus</p>
-      <p class="pub-meta">Poetry anthology · v10 print-ready</p>
-      <p class="pub-desc">The complete poetry corpus. Three movements, a Hinge, and an Appendix. 1982–2026.</p>
-    </div>
-    <div class="pub-item">
-      <p class="pub-title">Metaphysical Frameworks and Reasoning Quality in Large Language Models</p>
-      <p class="pub-meta">Academic paper · Submitted — Sophia (SOPH-D-26-00172) · Mind (MIND-D-26-00222) · Minds and Machines (MIND-D-26-00242)</p>
-      <p class="pub-desc">Empirical investigation of how metaphysical axiom sets modulate reasoning quality across AI architectures. Three frameworks, ten questions, eight dimensions. Results: C >> B >> A, p &lt; 0.001.</p>
-    </div>
-    <div class="pub-item">
-      <p class="pub-title">What the Light Cannot Tell You</p>
-      <p class="pub-meta">Prose-poem essay · Published on AllPoetry</p>
-      <p class="pub-desc">The physics of starlight delay as an epistemological argument.</p>
-      <a class="pub-link" href="https://allpoetry.com/story/19158328" target="_blank" rel="noopener">Read on AllPoetry ↗</a>
-    </div>
-  </div>
-</div>
+.ch-arr-down{width:2px;height:28px;background:#444;margin:0 auto;position:relative}
+.ch-arr-down::after{content:'';position:absolute;bottom:-7px;left:50%;transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid #444}
+.ch-arr-down-sm{width:2px;height:20px;background:#444;margin:0 auto;position:relative}
+.ch-arr-down-sm::after{content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #444}
 
-<div class="tab-panel" id="tab-domains">
-  <div class="page-wrap">
-    <p class="eyebrow">Domains</p>
-    <h1 class="page-title">Digital real estate</h1>
-    <p class="lead">Domains held under the Texun Trailboss umbrella.</p>
-    <ul class="domain-list">
-      <li>texun.com</li>
-      <li>texuntrailboss.com</li>
-      <li>empiricaldigitaltheology.com</li>
-    </ul>
-  </div>
-</div>
+.ch-which{font-family:Arial,sans-serif;font-size:11px;color:#555;margin:4px 0 10px;text-align:center}
 
-<div class="tab-panel" id="tab-doodles">
-  <div class="page-wrap">
-    <p class="eyebrow">Doodles</p>
-    <h1 class="page-title">Sketchbook</h1>
-    <p class="lead">Visual thinking. Works in progress. Things that don't fit anywhere else.</p>
-    <div class="placeholder-note">Images coming. Check back.</div>
-  </div>
-</div>
+.ch-fork{display:flex;gap:10px;width:100%;justify-content:center}
+.ch-fork-col{flex:1;display:flex;flex-direction:column;align-items:center;min-width:0}
+.ch-fork-col .ch-node{width:100%}
 
-<div class="tab-panel" id="tab-art">
-  <div class="page-wrap">
-    <p class="eyebrow">Art</p>
-    <h1 class="page-title">Visual work</h1>
-    <p class="lead">Finished visual pieces from the EDT project and beyond.</p>
-    <div class="placeholder-note">Images coming. Check back.</div>
-  </div>
-</div>
+.ch-join{width:100%;max-width:580px;height:1px;background:#444;margin:0 auto}
 
-<div class="tab-panel" id="tab-advertising">
-  <div class="page-wrap">
-    <p class="eyebrow">Advertising</p>
-    <h1 class="page-title">No ads here</h1>
-    <p class="lead">This site carries no advertising. The work is freely given.</p>
-    <p class="body-text">If you want to support the work, share it.</p>
-  </div>
-</div>
+.ch-selah{font-family:Georgia,serif;font-size:13px;font-style:italic;color:#444;margin-top:12px;cursor:pointer;letter-spacing:.06em;transition:color .15s;text-align:center}
+.ch-selah:hover{color:#888}
 
-<div class="tab-panel" id="tab-merchandise">
-  <div class="page-wrap">
-    <p class="eyebrow">Merchandise</p>
-    <h1 class="page-title">Coming</h1>
-    <p class="lead">Physical objects that carry the work into the world.</p>
-    <div class="placeholder-note">Store coming. Check back.</div>
-  </div>
-</div>
+.ch-panel{background:#1a1a1a;border:1px solid #2e2e2e;border-radius:12px;padding:20px 22px;max-width:520px;margin:20px auto 0;position:relative;animation:panelIn .2s ease}
+@keyframes panelIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.ch-panel-title{font-family:Arial,sans-serif;font-size:14px;font-weight:500;color:#e0e0e0;margin-bottom:10px}
+.ch-panel-title.eq-title{font-family:Georgia,serif;letter-spacing:.08em}
+.ch-panel-text{font-family:Georgia,serif;font-size:13px;color:#999;line-height:1.8}
+.ch-panel-close{position:absolute;top:14px;right:16px;background:none;border:none;color:#555;font-size:16px;cursor:pointer;line-height:1}
+.ch-panel-close:hover{color:#bbb}
+.ch-read-btn{display:inline-block;margin-top:12px;font-family:Arial,sans-serif;font-size:11px;color:#777;border:1px solid #333;border-radius:6px;padding:5px 14px;cursor:pointer;background:none;transition:all .15s;text-decoration:none}
+.ch-read-btn:hover{color:#eee;border-color:#777;opacity:1}
+.ch-read-btn.gold{background:#c8a84b;color:#111;border-color:#c8a84b;font-weight:500}
+.ch-read-btn.gold:hover{background:#d4b55a;opacity:1}
 
-<div class="tab-panel" id="tab-reveal">
-  <div class="page-wrap">
-    <div class="reveal-intro">
-      <p class="eyebrow">The Reveal ★</p>
-      <h1 class="reveal-title">The argument</h1>
-      <p class="reveal-sub">44 years. One question. What is the structural ground of any reasoning system? Not what you believe — what you cannot reason without. The corpus is here. The door is open.</p>
-    </div>
-    <a class="reveal-entry" href="the-beginning/index.html">
-      <p class="reveal-entry-eyebrow">1st Wave · November–December 2025</p>
-      <h2 class="reveal-entry-title">The Beginning</h2>
-      <p class="reveal-entry-desc">Where the empirical case was first assembled. Follow the argument from existence to a single unfakable equation. Click any node. Read in order or follow your own thread.</p>
-      <span class="reveal-entry-arrow">Enter →</span>
-    </a>
-    <hr class="divider">
-    <p class="body-text" style="color:#bbb;font-family:Arial,sans-serif;font-size:13px">More releases from the corpus will appear here as they are prepared for public deployment.</p>
-  </div>
-</div>
+.ch-gf-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ch-gf-copy{font-family:Arial,sans-serif;font-size:11px;color:#5DCAA5;margin-top:8px;display:none}
 
-<footer class="site-footer">
-  <p>texun.com &nbsp;·&nbsp; Russell H. Ritchey &nbsp;·&nbsp; Waco, Texas</p>
-  <p>Freely Given — Freely Give — No Rights Reserved</p>
-</footer>
+.ch-footer-note{text-align:center;font-family:Arial,sans-serif;font-size:11px;color:#333;margin-top:3rem;padding:0 1rem 2rem}
 
-<script>
-function showTab(id,btn){
-  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});
-  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
-  document.getElementById('tab-'+id).classList.add('active');
-  btn.classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+/* ─── PROSE VIEW ─── */
+#prose-view{background:#fafaf8;min-height:100vh}
+.back-btn{font-family:Arial,sans-serif;font-size:12px;color:#888;background:none;border:1px solid #ddd;border-radius:6px;padding:6px 14px;cursor:pointer;transition:all .15s}
+.back-btn:hover{color:#111;border-color:#999}
+
+.prose-stage{max-width:620px;margin:0 auto;padding:0 1.5rem 5rem;animation:proseIn .2s ease}
+@keyframes proseIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.prose-title-row{display:flex;align-items:baseline;gap:1rem;margin-bottom:2rem;padding-bottom:1.25rem;border-bottom:1px solid #e8e8e8}
+.prose-roman{font-family:Georgia,serif;font-size:.85rem;color:#ccc;letter-spacing:.08em;flex-shrink:0}
+.prose-name{font-family:Georgia,serif;font-size:1.5rem;font-weight:400;color:#111;letter-spacing:-.01em}
+
+.prose-body p{font-family:Georgia,'Times New Roman',serif;font-size:1.05rem;line-height:1.85;color:#222;margin-bottom:1.4rem;max-width:580px}
+.prose-body p:last-child{margin-bottom:0}
+.prose-body em{font-style:italic;color:#111}
+
+.prose-eq{background:#f7f7f5;border:1px solid #e5e5e5;border-radius:12px;padding:2rem;text-align:center;margin:2.5rem 0}
+.prose-eq-text{font-family:Georgia,serif;font-size:2rem;font-weight:400;color:#111;letter-spacing:.1em;margin-bottom:.5rem}
+.prose-eq-gloss{font-family:Arial,sans-serif;font-size:.8rem;color:#999;letter-spacing:.05em}
+.prose-selah{font-family:Georgia,serif;font-size:1.1rem;font-style:italic;color:#aaa;margin-top:2.5rem;letter-spacing:.06em}
+
+.prose-nav{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;border-top:1px solid #e8e8e8;margin-top:2rem}
+.pnav-btn{font-family:Arial,sans-serif;font-size:12px;padding:7px 18px;border-radius:8px;border:1px solid #ddd;background:transparent;color:#777;cursor:pointer;transition:all .15s}
+.pnav-btn:hover{background:#111;color:#fff;border-color:#111}
+.pnav-btn.pnav-fwd{background:#111;color:#fff;border-color:#111}
+.pnav-btn.pnav-fwd:hover{background:#333}
+.pnav-count{font-family:Arial,sans-serif;font-size:11px;color:#ccc;letter-spacing:.06em}
+
+@media(max-width:560px){
+  .beg-title{font-size:1.7rem}
+  .ch-fork{gap:6px}
+  .ch-main{font-size:12px}
+  .ch-sub{font-size:10px}
+  .ch-node{padding:10px 8px}
+  .prose-body p{font-size:1rem}
+  .prose-eq-text{font-size:1.5rem}
+  .ch-gf-actions{flex-direction:column}
 }
-</script>
-</body>
-</html>
