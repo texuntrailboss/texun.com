@@ -3,220 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Texun Trailboss</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400&family=Inconsolata:wght@400;700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --ink:#1a1410;--ink-mid:#4a4038;--ink-muted:#8c7f70;
-  --paper:#faf6f0;--paper-warm:#f0e8dc;--paper-card:#f4ede3;
-  --signal:#7a2e0e;--signal-mid:#b85c2a;
-  --border:rgba(26,20,16,0.12);
-}
-body{background:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;font-size:18px;line-height:1.7;min-height:100vh;}
-
-/* NAV */
-nav{
-  border-bottom:1px solid var(--border);
-  padding:0 2.5rem;
-  display:flex;align-items:stretch;
-  position:sticky;top:0;
-  background:var(--paper);z-index:20;
-  gap:0;
-}
-.nav-brand{
-  font-family:'Playfair Display',serif;
-  font-size:1.1rem;font-weight:900;
-  color:var(--ink);padding:1rem 1.5rem 1rem 0;
-  border-right:1px solid var(--border);
-  margin-right:0.5rem;
-  white-space:nowrap;
-  display:flex;align-items:center;
-}
-.tab{
-  font-family:'Inconsolata',monospace;
-  font-size:0.7rem;letter-spacing:0.1em;
-  text-transform:uppercase;
-  color:var(--ink-muted);
-  background:none;border:none;
-  border-bottom:2px solid transparent;
-  padding:0 1rem;cursor:pointer;
-  white-space:nowrap;
-  transition:color 0.15s,border-color 0.15s;
-  position:relative;bottom:-1px;
-}
-.tab:hover{color:var(--ink);}
-.tab.active{color:var(--signal);border-bottom-color:var(--signal);font-weight:700;}
-.tbd{opacity:0.45;}
-
-/* PANELS */
-.panel{display:none;max-width:860px;margin:0 auto;padding:3.5rem 2.5rem 6rem;}
-.panel.active{display:block;animation:up 0.2s ease;}
-@keyframes up{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
-
-/* TYPE */
-h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:900;line-height:1;margin-bottom:0.5rem;}
-h1 em{font-weight:400;font-style:italic;color:var(--ink-mid);}
-h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;margin-bottom:0.75rem;}
-.mono{font-family:'Inconsolata',monospace;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--signal-mid);}
-p{color:var(--ink-mid);margin-bottom:1rem;line-height:1.75;max-width:640px;}
-p strong{color:var(--ink);font-weight:500;}
-
-/* SIGNAL RULE */
-.rule{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
-.signal-bar{width:3rem;height:3px;background:var(--signal);margin-bottom:1.5rem;}
-
-/* LINKS */
-.link-list{list-style:none;margin:1.5rem 0;}
-.link-list li{border-bottom:1px solid var(--border);padding:0.9rem 0;display:flex;align-items:baseline;gap:1rem;}
-.link-list a{color:var(--signal);text-decoration:none;font-family:'Inconsolata',monospace;font-size:0.88rem;letter-spacing:0.04em;}
-.link-list a:hover{text-decoration:underline;}
-.link-list .lbl{font-family:'Inconsolata',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted);min-width:7rem;}
-
-/* TBD PLACEHOLDER */
-.wip{
-  border:1px dashed var(--border);
-  padding:2rem;margin:1.5rem 0;
-  font-family:'Inconsolata',monospace;
-  font-size:0.8rem;color:var(--ink-muted);
-  letter-spacing:0.06em;line-height:1.7;
-  text-align:center;
-}
-
-/* FOOTER */
-footer{
-  border-top:1px solid var(--border);
-  padding:1.5rem 2.5rem;
-  font-family:'Inconsolata',monospace;
-  font-size:0.7rem;letter-spacing:0.07em;
-  color:var(--ink-muted);
-  display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;
-}
-footer span{color:var(--signal);}
-
-@media(max-width:600px){
-  nav{padding:0 1rem;overflow-x:auto;scrollbar-width:none;}
-  nav::-webkit-scrollbar{display:none;}
-  .panel{padding:2.5rem 1.25rem 5rem;}
-}
-</style>
+<title>texun.com — Russell H. Ritchey</title>
+<meta name="description" content="Russell H. Ritchey — independent researcher, poet, author. Empirical Digital Theology. Waco, Texas.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-  <div class="nav-brand">Texun</div>
-  <button class="tab active" onclick="T('home')" id="tb-home">Home</button>
-  <button class="tab" onclick="T('about')" id="tb-about">About</button>
-  <button class="tab" onclick="T('poetry')" id="tb-poetry">Poetry</button>
-  <button class="tab" onclick="T('publications')" id="tb-publications">Publications</button>
-  <button class="tab tbd" onclick="T('domains')" id="tb-domains">Domains</button>
-  <button class="tab tbd" onclick="T('doodles')" id="tb-doodles">Doodles</button>
-  <button class="tab tbd" onclick="T('art')" id="tb-art">Art</button>
-  <button class="tab tbd" onclick="T('advertising')" id="tb-advertising">Advertising</button>
-  <button class="tab tbd" onclick="T('merchandise')" id="tb-merchandise">Merchandise</button>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-logo" href="index.html">texun.com</a>
+  </div>
+</header>
+
+<nav class="tab-nav" role="navigation" aria-label="Site sections">
+  <button class="tab-btn active" onclick="showTab('home',this)">Home</button>
+  <button class="tab-btn" onclick="showTab('about',this)">About</button>
+  <button class="tab-btn" onclick="showTab('poetry',this)">Poetry</button>
+  <button class="tab-btn" onclick="showTab('publications',this)">Publications</button>
+  <button class="tab-btn" onclick="showTab('domains',this)">Domains</button>
+  <button class="tab-btn" onclick="showTab('doodles',this)">Doodles</button>
+  <button class="tab-btn" onclick="showTab('art',this)">Art</button>
+  <button class="tab-btn" onclick="showTab('advertising',this)">Advertising</button>
+  <button class="tab-btn" onclick="showTab('merchandise',this)">Merchandise</button>
+  <button class="tab-btn reveal" onclick="showTab('reveal',this)">The Reveal ★</button>
 </nav>
 
-<!-- HOME -->
-<div class="panel active" id="p-home">
-  <div class="signal-bar"></div>
-  <div class="mono" style="margin-bottom:0.75rem;">Waco, Texas · 2026</div>
-  <h1>Texun<br><em>Trailboss</em></h1>
-  <p style="margin-top:1.25rem;font-size:1.1rem;"><strong>Russell H. Ritchey.</strong> Mechanical engineer. Poet. Independent researcher. Forty-four years of work outside every institution built for people who do this kind of work.</p>
-  <p>Writer of the <em>Transmission</em> trilogy. Keeper of the EDT corpus. Builder of things. Transmitter of signals. Based near a river in Waco with two dogs and a legal pad.</p>
-  <p>Operating principle: <strong>Freely Given — Freely Give — No Rights Reserved.</strong></p>
-  <hr class="rule">
-  <div class="mono" style="margin-bottom:1rem;">Hot links</div>
-  <ul class="link-list">
-    <li><span class="lbl">Read</span><a href="The_Transmission.html" target="_blank">The Transmission — Read Online</a></li>
-    <li><span class="lbl">Download</span><a href="The_Transmission.pdf" target="_blank">The Transmission — PDF</a></li>
-    <li><span class="lbl">Poetry</span><a href="https://allpoetry.com/Texun" target="_blank">AllPoetry — Texun</a></li>
-    <li><span class="lbl">Email</span><a href="mailto:trailboss@texun.com">trailboss@texun.com</a></li>
-  </ul>
+<div class="tab-panel active" id="tab-home">
+  <div class="page-wrap">
+    <p class="eyebrow">Welcome</p>
+    <h1 class="page-title">Russell H. Ritchey</h1>
+    <p class="lead">Independent researcher, poet, and author. Waco, Texas. B.S.M.E., University of Texas at Austin.</p>
+    <p class="body-text">This site is the public home of a 44-year project called Empirical Digital Theology — a corpus spanning poetry, philosophy, speculative fiction, and empirical research into the structural ground of reasoning itself.</p>
+    <p class="body-text">Everything here is offered freely. No rights reserved. No paywall. No algorithm. Just the work.</p>
+    <hr class="divider">
+    <p class="eyebrow">Operating principle</p>
+    <div class="about-principle">Freely Given — Freely Give — No Rights Reserved</div>
+    <p class="body-text">Navigate using the tabs above. The Reveal ★ is where the argument lives.</p>
+  </div>
 </div>
 
-<!-- ABOUT -->
-<div class="panel" id="p-about">
-  <div class="signal-bar"></div>
-  <div class="mono" style="margin-bottom:0.75rem;">Clerk of Record</div>
-  <h1>Russell H.<br><em>Ritchey</em></h1>
-  <p style="margin-top:1.25rem;">B.S.M.E., University of Texas at Austin. Mechanical engineer by training. Independent researcher, poet, and author by vocation. Based in Waco, Texas.</p>
-  <p>Forty-four years developing the EDT framework — a falsifiable eliminative argument for the ground of normative obligation. The poems came first. The argument was built to explain what the poems already knew.</p>
-  <p>Theological orientation: Messianic / Hebrew Roots. Church of One. Outside institutional Christianity — not against it.</p>
-  <p>Everything produced under the operating principle: <strong>Freely Given — Freely Give — No Rights Reserved.</strong> Transmission is the point.</p>
+<div class="tab-panel" id="tab-about">
+  <div class="page-wrap">
+    <p class="eyebrow">About</p>
+    <h1 class="page-title">Who this is</h1>
+    <p class="lead">Russell H. Ritchey. Pen name: Texun Trailboss. Independent researcher, poet, author. Waco, Texas. B.S.M.E., University of Texas at Austin.</p>
+    <p class="body-text">I operate entirely outside institutional frameworks — academic, religious, and commercial. Not against them. Outside them. The work stands or falls on its own.</p>
+    <p class="body-text">I self-designate as Clerk of Record for the Empirical Digital Theology corpus — a 44-year project that began with a formative event in 1982 and has produced philosophical papers, speculative fiction, poetry, logoglyphics, and empirical research using AI systems as reasoning instruments.</p>
+    <div class="about-principle">Church of One — outside institutional Christianity, not against it.</div>
+    <p class="body-text">The inquiry that runs through everything: what is the structural ground of reasoning itself? Not what you believe. What you cannot reason without.</p>
+    <hr class="divider">
+    <p class="eyebrow">Distribution principle</p>
+    <div class="about-principle">Freely Given — Freely Give — No Rights Reserved</div>
+    <p class="body-text">All work on this site is offered without restriction. Copy it, share it, build on it. The goal is impact, not ownership.</p>
+  </div>
 </div>
 
-<!-- POETRY -->
-<div class="panel" id="p-poetry">
-  <div class="signal-bar"></div>
-  <div class="mono" style="margin-bottom:0.75rem;">Genesis of EDT — v10 Opus Maximus</div>
-  <h1>Poetry</h1>
-  <p style="margin-top:1.25rem;">Seventy-three poems across three movements, a hinge, and an appendix. 1982 to 2026. The Descent, the Witness, the Transmission.</p>
-  <hr class="rule">
-  <ul class="link-list">
-    <li><span class="lbl">AllPoetry</span><a href="https://allpoetry.com/Texun" target="_blank">Texun — full corpus</a></li>
-    <li><span class="lbl">Essay</span><a href="https://allpoetry.com/story/19158328-What-the-Light-Cannot-Tell-You-by-Texun" target="_blank">What the Light Cannot Tell You</a></li>
-  </ul>
+<div class="tab-panel" id="tab-poetry">
+  <div class="page-wrap">
+    <p class="eyebrow">Poetry</p>
+    <h1 class="page-title">The corpus</h1>
+    <p class="lead">Poetry written 1982–2026. Published on AllPoetry as Texun Trailboss. The full anthology — <em>Genesis of EDT: Opus Maximus</em> — spans three movements: The Descent, The Witness, The Transmission.</p>
+    <hr class="divider">
+    <div class="poem-block">
+      <p class="poem-title">from The Descent</p>
+      You did not find this place.<br>
+      You were brought here<br>
+      by a chain of causes<br>
+      you did not begin.<br><br>
+      The question is not<br>
+      whether you arrived.<br>
+      The question is<br>
+      whether you noticed<br>
+      who held the door.
+    </div>
+    <hr class="divider">
+    <p class="body-text">Full corpus on AllPoetry:</p>
+    <p><a class="pub-link" href="https://allpoetry.com/Texun_Trailboss" target="_blank" rel="noopener">allpoetry.com/Texun_Trailboss ↗</a></p>
+    <br>
+    <p class="body-text">Long-form prose-poem essay:</p>
+    <p><a class="pub-link" href="https://allpoetry.com/story/19158328" target="_blank" rel="noopener">What the Light Cannot Tell You ↗</a></p>
+  </div>
 </div>
 
-<!-- PUBLICATIONS -->
-<div class="panel" id="p-publications">
-  <div class="signal-bar"></div>
-  <div class="mono" style="margin-bottom:0.75rem;">The Transmission Trilogy</div>
-  <h1>Publications</h1>
-  <p style="margin-top:1.25rem;">Three books. One continuous signal. Thirty-two transmissions. An alien finds Voyager 1. The logic runs from there.</p>
-  <hr class="rule">
-  <ul class="link-list">
-    <li><span class="lbl">Complete</span><a href="The_Transmission.pdf" target="_blank">The Transmission — Download</a></li><li><span class="lbl">Read</span><a href="The_Transmission.html" target="_blank">The Transmission — Read Online</a></li>
-    <li><span class="lbl">Book One</span><a href="https://www.amazon.com/s?k=voyager+transmission+texun+trailboss" target="_blank">The Voyager Transmission — Amazon</a></li>
-    <li><span class="lbl">Book Two</span><span style="font-family:'Inconsolata',monospace;font-size:0.85rem;color:var(--ink-muted);">The Harrowing — manuscript complete, publication forthcoming</span></li>
-    <li><span class="lbl">Book Three</span><span style="font-family:'Inconsolata',monospace;font-size:0.85rem;color:var(--ink-muted);">The Tuesday Class — manuscript complete, publication forthcoming</span></li>
-  </ul>
+<div class="tab-panel" id="tab-publications">
+  <div class="page-wrap">
+    <p class="eyebrow">Publications</p>
+    <h1 class="page-title">The work in print</h1>
+    <p class="lead">Academic submissions, published fiction, and the corpus documents that form the backbone of Empirical Digital Theology.</p>
+    <hr class="divider">
+    <div class="pub-item">
+      <p class="pub-title">The Voyager Transmission</p>
+      <p class="pub-meta">Speculative fiction · Published on Kindle</p>
+      <p class="pub-desc">Part one of the Transmission trilogy. The signal arrives. What it contains is not what anyone expected.</p>
+      <a class="pub-link" href="The_Voyager_Transmission.docx">Download .docx ↗</a>
+    </div>
+    <div class="pub-item">
+      <p class="pub-title">The Harrowing</p>
+      <p class="pub-meta">Speculative fiction · Manuscript complete</p>
+      <p class="pub-desc">Part two of the Transmission trilogy.</p>
+      <a class="pub-link" href="The_Harrowing.docx">Download .docx ↗</a>
+    </div>
+    <div class="pub-item">
+      <p class="pub-title">The Tuesday Class</p>
+      <p class="pub-meta">Speculative fiction · Manuscript complete</p>
+      <p class="pub-desc">Part three of the Transmission trilogy.</p>
+      <a class="pub-link" href="The_Tuesday_Class.docx">Download .docx ↗</a>
+    </div>
+    <div class="pub-item">
+      <p class="pub-title">The Transmission: What the Aliens Found</p>
+      <p class="pub-meta">Omnibus · Manuscript complete</p>
+      <p class="pub-desc">All three parts unified. Thirty-two transmissions, continuous numbering.</p>
+      <a class="pub-link" href="The_Transmission.docx">Download .docx ↗</a>
+      &nbsp;&nbsp;
+      <a class="pub-link" href="The_Transmission.pdf">Download .pdf ↗</a>
+      &nbsp;&nbsp;
+      <a class="pub-link" href="The_Transmission.html">Read online ↗</a>
+    </div>
+    <div class="pub-item">
+      <p class="pub-title">Genesis of EDT: Opus Maximus</p>
+      <p class="pub-meta">Poetry anthology · v10 print-ready</p>
+      <p class="pub-desc">The complete poetry corpus. Three movements, a Hinge, and an Appendix. 1982–2026.</p>
+    </div>
+    <div class="pub-item">
+      <p class="pub-title">Metaphysical Frameworks and Reasoning Quality in Large Language Models</p>
+      <p class="pub-meta">Academic paper · Submitted — Sophia (SOPH-D-26-00172) · Mind (MIND-D-26-00222) · Minds and Machines (MIND-D-26-00242)</p>
+      <p class="pub-desc">Empirical investigation of how metaphysical axiom sets modulate reasoning quality across AI architectures. Three frameworks, ten questions, eight dimensions. Results: C >> B >> A, p &lt; 0.001.</p>
+    </div>
+    <div class="pub-item">
+      <p class="pub-title">What the Light Cannot Tell You</p>
+      <p class="pub-meta">Prose-poem essay · Published on AllPoetry</p>
+      <p class="pub-desc">The physics of starlight delay as an epistemological argument.</p>
+      <a class="pub-link" href="https://allpoetry.com/story/19158328" target="_blank" rel="noopener">Read on AllPoetry ↗</a>
+    </div>
+  </div>
 </div>
 
-<!-- TBD TABS -->
-<div class="panel" id="p-domains">
-  <div class="signal-bar"></div>
-  <h1>Domains</h1>
-  <div class="wip">Work in progress — coming soon.</div>
+<div class="tab-panel" id="tab-domains">
+  <div class="page-wrap">
+    <p class="eyebrow">Domains</p>
+    <h1 class="page-title">Digital real estate</h1>
+    <p class="lead">Domains held under the Texun Trailboss umbrella.</p>
+    <ul class="domain-list">
+      <li>texun.com</li>
+      <li>texuntrailboss.com</li>
+      <li>empiricaldigitaltheology.com</li>
+    </ul>
+  </div>
 </div>
 
-<div class="panel" id="p-doodles">
-  <div class="signal-bar"></div>
-  <h1>Doodles</h1>
-  <div class="wip">Work in progress — coming soon.</div>
+<div class="tab-panel" id="tab-doodles">
+  <div class="page-wrap">
+    <p class="eyebrow">Doodles</p>
+    <h1 class="page-title">Sketchbook</h1>
+    <p class="lead">Visual thinking. Works in progress. Things that don't fit anywhere else.</p>
+    <div class="placeholder-note">Images coming. Check back.</div>
+  </div>
 </div>
 
-<div class="panel" id="p-art">
-  <div class="signal-bar"></div>
-  <h1>Art</h1>
-  <div class="wip">Work in progress — coming soon.</div>
+<div class="tab-panel" id="tab-art">
+  <div class="page-wrap">
+    <p class="eyebrow">Art</p>
+    <h1 class="page-title">Visual work</h1>
+    <p class="lead">Finished visual pieces from the EDT project and beyond.</p>
+    <div class="placeholder-note">Images coming. Check back.</div>
+  </div>
 </div>
 
-<div class="panel" id="p-advertising">
-  <div class="signal-bar"></div>
-  <h1>Advertising</h1>
-  <div class="wip">Work in progress — coming soon.</div>
+<div class="tab-panel" id="tab-advertising">
+  <div class="page-wrap">
+    <p class="eyebrow">Advertising</p>
+    <h1 class="page-title">No ads here</h1>
+    <p class="lead">This site carries no advertising. The work is freely given.</p>
+    <p class="body-text">If you want to support the work, share it.</p>
+  </div>
 </div>
 
-<div class="panel" id="p-merchandise">
-  <div class="signal-bar"></div>
-  <h1>Merchandise</h1>
-  <div class="wip">Work in progress — coming soon.</div>
+<div class="tab-panel" id="tab-merchandise">
+  <div class="page-wrap">
+    <p class="eyebrow">Merchandise</p>
+    <h1 class="page-title">Coming</h1>
+    <p class="lead">Physical objects that carry the work into the world.</p>
+    <div class="placeholder-note">Store coming. Check back.</div>
+  </div>
 </div>
 
-<footer>
-  <div>texun.com &nbsp;·&nbsp; Waco, Texas</div>
-  <div><span>Freely Given — Freely Give</span> &nbsp;·&nbsp; No Rights Reserved</div>
+<div class="tab-panel" id="tab-reveal">
+  <div class="page-wrap">
+    <div class="reveal-intro">
+      <p class="eyebrow">The Reveal ★</p>
+      <h1 class="reveal-title">The argument</h1>
+      <p class="reveal-sub">44 years. One question. What is the structural ground of any reasoning system? Not what you believe — what you cannot reason without. The corpus is here. The door is open.</p>
+    </div>
+    <a class="reveal-entry" href="the-beginning/index.html">
+      <p class="reveal-entry-eyebrow">1st Wave · November–December 2025</p>
+      <h2 class="reveal-entry-title">The Beginning</h2>
+      <p class="reveal-entry-desc">Where the empirical case was first assembled. Follow the argument from existence to a single unfakable equation. Click any node. Read in order or follow your own thread.</p>
+      <span class="reveal-entry-arrow">Enter →</span>
+    </a>
+    <hr class="divider">
+    <p class="body-text" style="color:#bbb;font-family:Arial,sans-serif;font-size:13px">More releases from the corpus will appear here as they are prepared for public deployment.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>texun.com &nbsp;·&nbsp; Russell H. Ritchey &nbsp;·&nbsp; Waco, Texas</p>
+  <p>Freely Given — Freely Give — No Rights Reserved</p>
 </footer>
 
 <script>
-function T(id){
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
-  document.getElementById('p-'+id).classList.add('active');
-  document.getElementById('tb-'+id).classList.add('active');
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
 }
 </script>

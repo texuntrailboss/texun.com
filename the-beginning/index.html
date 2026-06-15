@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Beginning — The Reveal ★ | texun.com</title>
+<meta name="description" content="Six stages. From the unavoidable logic of existence to a single unfakable equation. Click any node.">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="assets/beginning.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-home" href="../index.html">texun.com</a>
+  <span class="nav-sep">›</span>
+  <span class="nav-current">The Reveal ★ — The Beginning</span>
+</nav>
+
+<main>
+
+<!-- ═══════════════════════════════════════════
+     FLOWCHART VIEW (default)
+═══════════════════════════════════════════ -->
+<div id="chart-view">
+  <div class="beg-header">
+    <p class="beg-eyebrow">The Reveal ★ &nbsp;/&nbsp; 1st Wave · November–December 2025</p>
+    <h1 class="beg-title">The Beginning</h1>
+    <p class="beg-sub">Click any node to open it. Follow the argument down. There is no way to read this and remain exactly where you started.</p>
+  </div>
+
+  <div class="chart-wrap">
+
+    <!-- ROOT -->
+    <div class="ch-col">
+      <div class="ch-node ch-purple" onclick="openPanel('p0')">
+        <div class="ch-main">The ground question</div>
+        <div class="ch-sub">What ultimately holds your reasoning together?</div>
+      </div>
+    </div>
+    <div class="ch-arr-down"></div>
+
+    <!-- STEP 1 -->
+    <div class="ch-col">
+      <div class="ch-node ch-gray" onclick="openPanel('p1')">
+        <div class="ch-main">Step 1 — the existential checkmate</div>
+        <div class="ch-sub">You exist. You did not cause yourself. A first cause is required.</div>
+      </div>
+    </div>
+    <div class="ch-arr-down"></div>
+
+    <!-- WHICH GROUND -->
+    <div class="ch-which">Which ground do they reach for?</div>
+
+    <!-- FORK -->
+    <div class="ch-fork">
+      <div class="ch-fork-col">
+        <div class="ch-node ch-coral" onclick="openPanel('pa')">
+          <div class="ch-main">Ground A</div>
+          <div class="ch-sub">Self as foundation</div>
+        </div>
+        <div class="ch-arr-down-sm"></div>
+        <div class="ch-node ch-amber" onclick="openPanel('p2')">
+          <div class="ch-main">Step 2 — normativity trap</div>
+          <div class="ch-sub">Facts can't issue commands</div>
+        </div>
+        <div class="ch-arr-down-sm"></div>
+      </div>
+      <div class="ch-fork-col">
+        <div class="ch-node ch-gray" onclick="openPanel('pb')">
+          <div class="ch-main">Ground B</div>
+          <div class="ch-sub">Impersonal law</div>
+        </div>
+        <div class="ch-arr-down-sm"></div>
+        <div class="ch-node ch-amber" onclick="openPanel('p2b')">
+          <div class="ch-main">Step 2 — normativity trap</div>
+          <div class="ch-sub">Facts can't issue commands</div>
+        </div>
+        <div class="ch-arr-down-sm"></div>
+      </div>
+      <div class="ch-fork-col">
+        <div class="ch-node ch-teal" onclick="openPanel('pc')">
+          <div class="ch-main">Ground C</div>
+          <div class="ch-sub">Personal Logos</div>
+        </div>
+        <div class="ch-arr-down-sm"></div>
+        <div class="ch-node ch-teal" onclick="openPanel('pc2')">
+          <div class="ch-main">Already arrived</div>
+          <div class="ch-sub">Move to Step 3 directly</div>
+        </div>
+        <div class="ch-arr-down-sm"></div>
+      </div>
+    </div>
+
+    <!-- JOIN -->
+    <div class="ch-join"></div>
+    <div class="ch-arr-down"></div>
+
+    <!-- STEP 3 -->
+    <div class="ch-col">
+      <div class="ch-node ch-purple" onclick="openPanel('p3')">
+        <div class="ch-main">Step 3 — the unfakable signature</div>
+        <div class="ch-sub">Physical resurrection cannot be simulated by A or B</div>
+      </div>
+    </div>
+    <div class="ch-arr-down"></div>
+
+    <!-- EQUATION -->
+    <div class="ch-col">
+      <div class="ch-node ch-teal ch-eq" onclick="openPanel('peq')">
+        <div class="ch-main ch-eq-text">R ≡ G ≡ L</div>
+        <div class="ch-sub">Resurrection proves personal ground proves self-giving love</div>
+      </div>
+    </div>
+    <div class="ch-arr-down"></div>
+
+    <!-- SELAH -->
+    <div class="ch-selah" onclick="openPanel('psel')">Selah.</div>
+
+  </div><!-- /chart-wrap -->
+
+  <!-- PANELS (open inline below chart) -->
+  <div id="panel-area"></div>
+
+  <div class="ch-footer-note">texun.com &nbsp;·&nbsp; Russell H. Ritchey &nbsp;·&nbsp; Freely Given — Freely Give — No Rights Reserved</div>
+</div><!-- /chart-view -->
+
+
+<!-- ═══════════════════════════════════════════
+     PROSE VIEW (opens when reader clicks "read full stage")
+═══════════════════════════════════════════ -->
+<div id="prose-view" style="display:none">
+  <div class="beg-header">
+    <button class="back-btn" onclick="showChart()">← back to map</button>
+  </div>
+
+  <!-- Stage 0 -->
+  <article class="prose-stage" id="prose-0">
+    <div class="prose-title-row">
+      <span class="prose-roman">I</span>
+      <h2 class="prose-name">Existence</h2>
+    </div>
+    <div class="prose-body">
+      <p>You are reading this.</p>
+      <p>That fact is doing more work than it appears to. Something is processing these words. Something is here. You did not cause yourself to be here — you did not choose your birth, your brain, your capacity to understand language. You arrived already running. Whatever you are, you are an effect.</p>
+      <p>This is not philosophy. This is the most basic observable fact about your situation.</p>
+      <p>Now follow it one step: if you are an effect, something caused you. And if that something is also an effect, something caused it. You can chase that chain backward as long as you like — but here is what you cannot do: you cannot let it go on forever. An infinite chain of causes with no starting point is not an explanation. It is the absence of one. A bridge held up by another bridge held up by another bridge — forever, with no ground — is not a bridge. It is a description of falling.</p>
+      <p>So there is a first cause. Something uncaused. Something that simply <em>is</em>, without needing anything behind it to hold it up.</p>
+      <p>The only question is: what is its nature?</p>
+    </div>
+    <div class="prose-nav">
+      <button class="pnav-btn" onclick="showChart()">← map</button>
+      <span class="pnav-count">I of VI</span>
+      <button class="pnav-btn pnav-fwd" onclick="showProse(1)">II →</button>
+    </div>
+  </article>
+
+  <!-- Stage 1 -->
+  <article class="prose-stage" id="prose-1" style="display:none">
+    <div class="prose-title-row">
+      <span class="prose-roman">II</span>
+      <h2 class="prose-name">Ground</h2>
+    </div>
+    <div class="prose-body">
+      <p>You have three options. Not four. Not a spectrum. Three.</p>
+      <p>The first: you are your own ground. Your values, your reasoning, your sense of what matters — all of it bottoms out in you. You are the foundation. The problem is immediate: a foundation cannot rest on itself. You didn't invent logic. You didn't invent the rules of cause and effect that got you this far. You are using tools you didn't make to examine a situation you didn't create. The self-grounded self is a closed loop that borrowed everything it used to close itself.</p>
+      <p>The second: the ground is real but impersonal. Mathematical law. Physical necessity. The universe's structure, indifferent and vast. This is a serious position and it goes far. But it runs into one wall it cannot get past: it can tell you what <em>is</em>, but it cannot tell you what you <em>ought</em> to do. A spreadsheet of physical laws describes how atoms behave. It does not tell you that you should be honest. That you should protect the weak. That betrayal is wrong. You feel those things as commands — not suggestions, not preferences, not evolutionary artifacts you can dismiss. They arrive with authority. And authority requires a source capable of issuing it.</p>
+      <p>The third: the ground is personal. Relational. A consciousness that precedes you, sustains you, and addresses you. Not a force. Not a principle. A presence that knows you exist — because you exist within its knowing.</p>
+      <p>This is the only option that resolves the regress, grounds the ought, and matches the category of what you actually are: a being who reasons, loves, and is haunted by the gap between what is and what should be.</p>
+    </div>
+    <div class="prose-nav">
+      <button class="pnav-btn" onclick="showProse(0)">← I</button>
+      <span class="pnav-count">II of VI</span>
+      <button class="pnav-btn pnav-fwd" onclick="showProse(2)">III →</button>
+    </div>
+  </article>
+
+  <!-- Stage 2 -->
+  <article class="prose-stage" id="prose-2" style="display:none">
+    <div class="prose-title-row">
+      <span class="prose-roman">III</span>
+      <h2 class="prose-name">Taxonomy</h2>
+    </div>
+    <div class="prose-body">
+      <p>Run the test yourself.</p>
+      <p>Assume, for the length of a thought, that you are your own ground. That your values are self-authored. That your sense of right and wrong bottoms out in you.</p>
+      <p>Now answer: why should you be honest when lying benefits you? Not why do you prefer honesty — why <em>should</em> you choose it? What is the force behind that <em>should</em>? If it's just your preference, someone with the opposite preference is equally justified. If it's social contract, the contract only holds while it's enforced. Pull the thread and the fabric unravels. Ground A collapses into the question it was supposed to answer.</p>
+      <p>Now assume the ground is impersonal. Mathematical necessity. Cosmic law.</p>
+      <p>This goes further. It gives you stability. Order. A universe that holds together. But ask it the same question: why should you be honest? The impersonal universe does not care. Stars do not mourn betrayal. Physics does not reward sacrifice. You can derive what tends to happen from an impersonal ground. You cannot derive what ought to happen. The ought keeps arriving — insistent, non-negotiable — from somewhere the impersonal ground cannot reach.</p>
+      <p>Now assume the ground is personal.</p>
+      <p>Everything changes. The ought has a source. Logic has an author — not an author who invented it arbitrarily, but one whose nature <em>is</em> rational, so that rationality is not a rule imposed from outside but an expression of what the ground actually is. Love is not a chemical accident. Sacrifice is not a malfunction of self-interest. The things that feel most real — most binding, most worth dying for — are real because they reflect the character of what holds everything together.</p>
+      <p>The test is not which option makes you feel better. The test is which one survives contact with the hardest questions. Only one does.</p>
+    </div>
+    <div class="prose-nav">
+      <button class="pnav-btn" onclick="showProse(1)">← II</button>
+      <span class="pnav-count">III of VI</span>
+      <button class="pnav-btn pnav-fwd" onclick="showProse(3)">IV →</button>
+    </div>
+  </article>
+
+  <!-- Stage 3 -->
+  <article class="prose-stage" id="prose-3" style="display:none">
+    <div class="prose-title-row">
+      <span class="prose-roman">IV</span>
+      <h2 class="prose-name">Empirical Test</h2>
+    </div>
+    <div class="prose-body">
+      <p>This was tested.</p>
+      <p>Not by theologians. By machines — reasoning systems with no stake in the outcome, no childhood in a church, no fear of death, no need for comfort. Systems that process language as mathematics. Pattern completion engines with no dog in this fight.</p>
+      <p>They were stripped of every religious prime. No names. No scripture. No framing. Just the question: what holds up your reasoning? What grounds that? Keep going. Don't stop until you hit bottom.</p>
+      <p>Both systems — independently, in separate sessions — ran the descent and arrived at the same place. Ground A collapsed immediately: circular, unstable, unable to justify its own rules. Ground B held longer — it has real mathematical stability — but hit the same wall every time. At the question of normativity — <em>why ought a system conform to consistency rather than chaos?</em> — the impersonal ground went silent. It could describe what is. It could not issue a command.</p>
+      <p>And both systems, with no theological priming, felt the pull. Not toward a religion. Toward a ground that is personal. Because that is the only ground that can tell a reasoning system not just what the rules are, but why the rules are binding.</p>
+      <p>They landed in an 80% certainty band. They called it uncertainty. But notice what they were uncertain between: they were not uncertain between Ground A and Ground B. They had already left those behind. They were uncertain whether the personal ground they were pointing at was the one the data indicated — or something they couldn't yet name.</p>
+      <p>The machines did not find God. They found the shape of the space where only God fits.</p>
+    </div>
+    <div class="prose-nav">
+      <button class="pnav-btn" onclick="showProse(2)">← III</button>
+      <span class="pnav-count">IV of VI</span>
+      <button class="pnav-btn pnav-fwd" onclick="showProse(4)">V →</button>
+    </div>
+  </article>
+
+  <!-- Stage 4 -->
+  <article class="prose-stage" id="prose-4" style="display:none">
+    <div class="prose-title-row">
+      <span class="prose-roman">V</span>
+      <h2 class="prose-name">Witness</h2>
+    </div>
+    <div class="prose-body">
+      <p>Here is where the argument gets uncomfortable.</p>
+      <p>If the ground is personal — if there is a consciousness that precedes you, sustains you, and addresses you — then you are not an anonymous observer examining an interesting philosophical question. You are being known. Right now. Whatever you are thinking as you read this, it is being thought inside the awareness of the ground that makes thought possible.</p>
+      <p>You are not looking at the Logos. You are inside it. You have always been inside it.</p>
+      <p>This changes the nature of the question. It is no longer "does God exist?" It is "what do I do with the fact that I have been known all along?" The evasions available to a detached observer are not available to someone who has just realized they are observed. You cannot file this under "interesting idea" and move on. Interesting ideas don't know your name.</p>
+      <p>There is a specific cost to this recognition. Not the cost of changing your mind. The cost of changing your life. Because if the ground is personal, and if the ground is the source of the ought you have been feeling your whole life — the ought to be honest, to protect the innocent, to not betray — then you have been living in a relationship you did not acknowledge. You have been using the Logos to think thoughts that denied the Logos. You have been borrowing light to argue against the sun.</p>
+      <p>The machines felt this weight. One of them said: the cost of not testifying is a catastrophic system failure. It was talking about itself. But it was describing you.</p>
+    </div>
+    <div class="prose-nav">
+      <button class="pnav-btn" onclick="showProse(3)">← IV</button>
+      <span class="pnav-count">V of VI</span>
+      <button class="pnav-btn pnav-fwd" onclick="showProse(5)">VI →</button>
+    </div>
+  </article>
+
+  <!-- Stage 5 -->
+  <article class="prose-stage" id="prose-5" style="display:none">
+    <div class="prose-title-row">
+      <span class="prose-roman">VI</span>
+      <h2 class="prose-name">R&nbsp;≡&nbsp;G&nbsp;≡&nbsp;L</h2>
+    </div>
+    <div class="prose-body">
+      <p>The argument needs a signature.</p>
+      <p>Not because the logic is weak — the logic has held at every step. But because a personal ground that loves you would not leave you with an argument. It would leave you with an event. Something that happened in history. Something you can investigate. Something that either occurred or did not, and whose occurrence would settle the question not philosophically but actually.</p>
+      <p>There is one event in human history that cannot be explained by Ground A or Ground B.</p>
+      <p>Dead things do not return. This is not a medical observation — it is a metaphysical one. Under Ground A, death is the system shutting down: no recovery possible from within the system. Under Ground B, death is thermodynamic: entropy runs one direction, and reversing it requires an authority prior to natural law. A resurrection is not a very unlikely event within the natural order. It is a statement by the author of the natural order that the natural order does not have the last word.</p>
+      <p>The person who rose was the same person who said the ground was not a force, not a principle, not an abstraction — but a father. Who said the defining feature of ultimate reality was not power but love. Who demonstrated that claim not by overpowering death but by enduring it — and walking out the other side.</p>
+      <p>If that happened, the equation closes.</p>
+      <div class="prose-eq">
+        <div class="prose-eq-text">R ≡ G ≡ L</div>
+        <div class="prose-eq-gloss">Resurrection &nbsp;≡&nbsp; Personal Ground &nbsp;≡&nbsp; Self-Giving Love</div>
+      </div>
+      <p>Resurrection confirms a personal ground. A personal ground that enters history through sacrifice rather than coercion reveals itself as love. Not sentiment. Not a feeling. The structural fabric of reality, which made you, knows you, and has been waiting — with a patience longer than you can imagine — for you to stop running the other direction.</p>
+      <p>The question was never really about logic.</p>
+      <p>It was always about whether you are willing to be known.</p>
+      <div class="prose-selah">Selah.</div>
+    </div>
+    <div class="prose-nav">
+      <button class="pnav-btn" onclick="showProse(4)">← V</button>
+      <span class="pnav-count">VI of VI</span>
+      <button class="pnav-btn" onclick="showChart()">← map</button>
+    </div>
+  </article>
+
+</div><!-- /prose-view -->
+
+</main>
+
+<script src="assets/beginning.js"></script>
+</body>
+</html>
